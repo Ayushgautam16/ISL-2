@@ -22,8 +22,9 @@
       padding: 70px;
     }
     .video{
-      width:500px;
-      height: 500px;
+      width:800px;
+      height: 800px;
+
     }
     .btn{
       margin-top: 20px;
@@ -31,13 +32,23 @@
     .form-control{
       margin-top: 10px;
     }
+   .bg{
+    background-image: url("");
 
+/* Full height */
+height: 100%; 
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+   }
   </style>
 
-</head>
 
-<body>
-
+<body >
+ <img style="position: a"
+ ="backgro.jpg" alt="">
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -53,7 +64,7 @@
 
   <!-- ***** Pre-Header Area Start ***** -->
   <div class="pre-header">
-    <div class="container">
+    <div class="bg container">
       <div class="row">
         <div class="col-lg-8 col-sm-9">
           <div class="left-info">
@@ -111,19 +122,21 @@
   <!-- Main Content Area -->
 
   
-  <div class="container mt-5 d-flex justify-content-center">
+  <div class="container mt-5 d-flex justify-content-center  " style="flex-direction: column;">
     <div class="container">
-    <h2>Text to Sign</h1>
-    <div class="form-group">
+    <h2 class="" style="text-align: center;">Text to Sign</h1>
+    <div class="form-group justify-content-center " style="display:flex">
       <input type="text" id="inputText" class="form-control w-100 " placeholder="Enter text here">
        <!-- <textarea id="inputText" class="form-control" placeholder="Enter text here"></textarea> -->
     </div>
     <button id="charButton" class="btn btn-primary" id="btn1">Character Level</button>
     <button id="gestureButton" class="btn btn-secondary" id="btn2">Gesture Level</button>
-  </div>
+  
 
-    <div id="videoContainer" class="mt-4" class="video"></div>
-  </div>
+    <div id="videoContainer" class="mt-4" class="video" >
+
+    </div>
+  
 </main>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -159,8 +172,8 @@
 
           const videoElement = document.createElement('video');
           videoElement.src = data.video_path;
-          videoElement.style.width = '350px';
-          videoElement.style.height = '350px';
+          videoElement.style.width = '1308px';
+          videoElement.style.height = '687px';
           videoElement.controls = true;
           videoElement.autoplay = true;
           videoContainer.appendChild(videoElement);
@@ -181,6 +194,10 @@
   <script src="{{ url_for('static', filename='assets/js/tabs.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/popup.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+
+  
+
+
 
 </body>
 

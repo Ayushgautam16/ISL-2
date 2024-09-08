@@ -8,7 +8,9 @@
   height:740px;
   /* border: 5px solid black; */
 }
-
+body{
+  background-image:url("9162793.jpg");
+}
 
 .video{
   width:880px;
